@@ -3,14 +3,14 @@ Crypto Wallet Transactions Tracker Bot
 </h1>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/github/stars/cankatx/stealer">
-    <img src="https://img.shields.io/github/forks/cankatx/stealer"> 
+    <img src="https://img.shields.io/github/stars/cankatx/crypto-wallet-tracker">
+    <img src="https://img.shields.io/github/forks/cankatx/crypto-wallet-tracker"> 
     <br>
-    <img src="https://img.shields.io/github/languages/top/cankatx/stealer">
-    <img src="https://img.shields.io/github/last-commit/cankatx/stealer">
+    <img src="https://img.shields.io/github/languages/top/cankatx/crypto-wallet-tracker">
+    <img src="https://img.shields.io/github/last-commit/cankatx/crypto-wallet-tracker">
     <br>
-    <img src="https://img.shields.io/github/issues/cankatx/stealer">
-    <img src="https://img.shields.io/github/issues-closed/cankatx/stealer">
+    <img src="https://img.shields.io/github/issues/cankatx/crypto-wallet-tracker">
+    <img src="https://img.shields.io/github/issues-closed/cankatx/crypto-wallet-tracker">
     <br>
 </p>
 
