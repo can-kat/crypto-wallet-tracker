@@ -9,7 +9,7 @@ from web3 import Web3
 ETHERSCAN_API_KEY = '<your_etherscan_api_key>'
 BSCSCAN_API_KEY = '<your_bscscan_api_key>'
 TELEGRAM_BOT_TOKEN = '<your_telegram_bot_token>'
-TELEGRAM_CHAT_ID = "<your_telegram_chat_id>"
+TELEGRAM_CHAT_ID = '<your_telegram_chat_id>'
 
 # Define some helper functions
 def get_wallet_transactions(wallet_address, blockchain):
