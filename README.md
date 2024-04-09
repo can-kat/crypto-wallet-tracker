@@ -1,67 +1,82 @@
-<h1 align="center">
-Crypto Wallet Transactions Tracker Bot
-</h1>
+# Crypto Wallet Tracker Bot
 
-</p>
-<p align="center">
-    <img src="https://img.shields.io/github/stars/cankatx/crypto-wallet-tracker">
-    <img src="https://img.shields.io/github/forks/cankatx/crypto-wallet-tracker"> 
-    <br>
-    <img src="https://img.shields.io/github/languages/top/cankatx/crypto-wallet-tracker">
-    <img src="https://img.shields.io/github/last-commit/cankatx/crypto-wallet-tracker">
-    <br>
-    <img src="https://img.shields.io/github/issues/cankatx/crypto-wallet-tracker">
-    <img src="https://img.shields.io/github/issues-closed/cankatx/crypto-wallet-tracker">
-    <br>
-</p>
+## Introduction
 
-This is a Telegram bot that tracks the transactions of added Ethereum (ETH) and Binance Coin (BNB) wallets and sends notifications whenever a new transaction occurs. The bot uses the Etherscan and BSCscan APIs to gather information about transactions, and CoinGecko to fetch the current prices of ETH and BNB.
-
-You can contact me for any inquiry; <br>
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/cankat)
-
-## Commands
-
-- `/start` shows a welcome message and instructions on how to use the bot.
-- `/add` adds a new wallet to track transactions for. The wallet address must be provided in the correct format (starting with '0x' for ETH wallets and 'bnb' for BNB wallets), otherwise the bot will prompt the user to correct it. The added wallets are saved in a JSON file for persistence.
-- `/remove` removes a wallet from the list of tracked wallets. The user must provide the wallet address in the correct format.
-- `/list` shows the list of currently tracked wallets.
+The Crypto Wallet Tracker Bot is a Telegram bot that allows users to monitor their Ethereum (ETH) and Binance Smart Chain (BNB) wallet transactions in real-time. Users can add their wallet addresses to the bot, and it will send them notifications whenever incoming or outgoing transactions occur on their wallets.
 
 ## Features
 
-- Logging: the bot prompts every transaction and errors.
-- Format check: the bot checks that the wallet address provided by the user is in the correct format before adding it to the list of tracked wallets.
-
-## Requirements
-
-To run the bot, you'll need to have Python 3.6 or later installed on your system, along with the following Python libraries:
-
-- `requests` (for making HTTP requests to the APIs)
-- `web3` (for interacting with the Ethereum blockchain)
-
-You'll also need to obtain API keys for Etherscan and BSCscan, as well as a Telegram bot token. These can be obtained by following the instructions on the respective websites.
+- **Real-time Transaction Monitoring**: The bot continuously monitors user-specified wallet addresses and sends notifications for incoming and outgoing transactions.
+- **Supports Ethereum and Binance Smart Chain**: Users can monitor wallets on both Ethereum and Binance Smart Chain blockchains.
+- **Telegram Integration**: Notifications are sent directly to users via Telegram, making it convenient to stay updated on wallet activities.
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/cankatx/crypto-wallet-tracker.git`
-2. Install the required packages: `pip install -r requirements.txt`
-3. Replace the following placeholders in the `main.py` file with your API keys and bot token:
+To use the Crypto Wallet Tracker Bot, follow these steps:
 
-    ```python
-    ETHERSCAN_API_KEY = '<your_etherscan_api_key>'
-    BSCSCAN_API_KEY = '<your_bscscan_api_key>'
-    TELEGRAM_BOT_TOKEN = '<your_telegram_bot_token>'
-    TELEGRAM_CHAT_ID = '<your_telegram_chat_id>'
-    ```
-4. Start the bot: `python main.py`
+1. Clone the repository:
 
-## Screenshots
+   ```bash
+   git clone https://github.com/your-username/crypto-wallet-tracker-bot.git
+   ```
 
-  <img src="images/image3.png" width="505" height="395" />
-  <img src="images/image2.png" width="509" height="380" />
-  <img src="images/image1.png" width="470" height="175" />
-</p>
+2. Install the required dependencies:
 
-## Disclaimer
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This bot is provided for educational purposes only and should not be used as financial advice. The bot does not have access to your wallet.
+3. Create a `.env` file and add your Telegram bot token:
+
+   ```bash
+   TELEGRAM_BOT_TOKEN=<your_telegram_bot_token>
+   TELEGRAM_CHAT_ID=<your_telegram_chat_id>
+   ```
+
+4. Obtain API keys from Etherscan and BscScan for Ethereum and Binance Smart Chain respectively, and replace `<your_etherscan_api_key>` and `<your_bscscan_api_key>` in the code with your actual API keys.
+
+5. Run the bot:
+
+   ```bash
+   python bot.py
+   ```
+
+## Changes and Fixes
+
+- **Improved Code Readability**: Refactored the code to improve readability and maintainability.
+- **Added Environment Variables**: Utilized environment variables for sensitive information such as API keys and Telegram bot token.
+- **Enhanced Error Handling**: Implemented better error handling mechanisms to gracefully handle exceptions and errors.
+- **Updated Dependency Management**: Included `python-dotenv` for managing environment variables more effectively.
+- **Fixed API Key Handling**: Revised the code to properly handle API keys for different blockchains.
+
+## Usage
+
+1. Start the bot by sending the `/start` command to initiate the bot and get instructions on how to use it.
+
+2. Add a wallet to monitor using the `/add <blockchain> <wallet_address>` command. For example:
+
+   ```
+   /add ETH 0x123456789abcdef
+   ```
+
+   Replace `ETH` with the blockchain (either `ETH` for Ethereum or `BNB` for Binance Smart Chain), and `0x123456789abcdef` with the wallet address you want to monitor.
+
+3. Remove a wallet from monitoring using the `/remove <blockchain> <wallet_address>` command. For example:
+
+   ```
+   /remove ETH 0x123456789abcdef
+   ```
+
+   Replace `ETH` with the blockchain and `0x123456789abcdef` with the wallet address you want to stop monitoring.
+
+4. List all wallets being monitored for a specific blockchain using the `/list <blockchain>` command. For example:
+
+   ```
+   /list ETH
+   ```
+
+   Replace `ETH` with the blockchain you want to list wallets for.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request. Email : Ashik@Spudblocks.com
